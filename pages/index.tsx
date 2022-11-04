@@ -38,7 +38,7 @@ const Home: NextPage = () => {
                 <li key={key}>
                   <div className={styles.title}>
                     <CopyToClipboard
-                      key={`${router.pathname}?username=${key}`}
+                      key={`https://pup-gray.vercel.app?username=${key}`}
                       text={key}
                       onCopy={() => {
                         toast(
