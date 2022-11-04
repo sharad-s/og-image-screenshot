@@ -13,7 +13,6 @@ const Home: NextPage = () => {
     console.log(window.URL, router.query, router);
   }, []);
   const { username } = router.query
-  console.log({first})
   return (
     <>
       <Toaster />
