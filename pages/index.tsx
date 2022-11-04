@@ -4,9 +4,12 @@ import styles from "../styles/Home.module.css";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import toast, { Toaster } from 'react-hot-toast';
 import { DB } from "../lib/db";
+import { useRouter } from "next/router";
 
 
 const Home: NextPage = () => {
+  const router = useRouter()
+  console.log({router})
   return (
     <>
       <Toaster />
@@ -27,7 +30,7 @@ const Home: NextPage = () => {
               return (
                 <li key={key}> 
                   <div className={styles.title}>
-                    <CopyToClipboard key={key} text={key} onCopy={() => {
+                    <CopyToClipboard key={router.pathname + key} text={key} onCopy={() => {
                       toast("Copied URL to Clipboard, paste in Meta Tag Explorer")
                     }}>
                       <a href="#">{key}</a>
