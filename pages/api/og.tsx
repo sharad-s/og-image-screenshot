@@ -2,6 +2,8 @@ import { ImageResponse } from "@vercel/og";
 import { NextRequest } from "next/server";
 import { DB } from "../../lib/db";
 
+// https://vercel.com/docs/concepts/functions/edge-functions/og-image-examples
+
 export const config = {
   runtime: "experimental-edge",
 };
